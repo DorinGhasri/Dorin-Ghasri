@@ -4,36 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div style="color: rgb(211, 156, 248);font-family:verdana;margin-bottom: 15px;">
-        <h1>Contact Us</h1><br>
-        <form action="" method="get">
-            <label for="fname">First name:</label>
-            <input type="text" id="fname" name="fname"><br><br>
-            <label for="lname">Last name:</label>
-            <input type="text" id="lname" name="lname"><br><br>
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="email"><br><br>
-            <label for="phone">Phone Number:</label>
-            <input type="text" id="phone" name="phone"><br><br>
-            <label for="doggender">Choose the dog gender you would like to adopt:</label>
-            <input list="dgender" name="doggender" id="doggender">
-            <datalist id="dgender">
-                <option value="Male">
-                <option value="Female">
-                
-            </datalist><br><br>
-            <input type="checkbox" name="acceptemail" value="Bike">
-            <label for="acceptemail"> I would like to accept emails about adopting!</label><br><br>
-            
-            <input type="submit" value="Submit">
-        </form>
-    </div>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <script defer src="..//static/DogsPageJS.js"></script>
 
-    <footer style="position:fixed;bottom:0;font-family:verdana;color: rgb(163, 99, 206);">
-        <h6>We love pets association <br> locate at Beer Sheva <br><span style="color: rgb(247, 119, 240);">Come and visit us!</span> </h6>
-    </footer>
+</head>
+
+<body>
+    <div id="container">
+        <header id="myHeader">
+            <nav>
+                <ul class = "navLinks">
+                    <li><a href="HomePage.html">Home Page</a></li>
+                    <li><a href="contactUs.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <img src="..//static/logo.png" id="headerLogo">
+        </header>
+        
+
+
+        <div id="center">
+            <h1 id="title">Contact Us</h1><br><br>
+            <form action="" method="get">
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname" required ><br><br>
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname" required><br><br>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required><br><br>
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required><br><br>
+                <label for="doggender">I want to adopt a:</label>
+                <input list="dgender" name="doggender" id="doggender" required>
+                <datalist id="dgender" required>
+                    <option value="Male Dog">
+                    <option value="Female Dod">    
+                </datalist><br><br>
+                <input type="checkbox" name="acceptemail" value="wantMail">
+                <label for="acceptemail"> I would like to accept emails about adopting!</label><br><br>
+                <p id="submitText"></p><br>
+                <input id="submitButton" value ="Submit" type="submit"  onclick="myTyping()">
+    
+                
+            </form>
+
+        </div>
+
+        <footer id = "footer">
+            <h6>Sweet Paw - Dog Shelter<br> locate at Beer Sheva <br><span>Come and visit us!</span> </h6>
+        </footer>
+    </div>
 </body>
 </html>
